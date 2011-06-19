@@ -1,7 +1,6 @@
 HP Operations Manager Message History Script
 ============================================
 
-<pre>
 Usage: opchist 
         [-server <server>] 
         [-minutes <mins>] [-hours <hours>] [-days <days>] [-all] 
@@ -81,4 +80,3 @@ Usage: opchist
         http://yourserverhere/twiki/bin/view/HPOM/Opchist
 
 opchist,v10
-</pre>
