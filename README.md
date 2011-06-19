@@ -2,27 +2,27 @@ HP Operations Manager Message History Script
 ============================================
 
 Usage: opchist 
-        [-server <server>] 
-        [-minutes <mins>] [-hours <hours>] [-days <days>] [-all] 
-        [-from <dd/mm/yy> [hh:mm]] [-to <dd/mm/yy> [hh:mm]] [-count <num>]
-        [-id <msg_id>] [-severity critical,normal,unknown,warning,minor,all,major] 
-        [-node <node>] [-application <app>] [-group <msg_g>] [-object <obj>]
-        [-text <text>] [-service <svc_id>] 
-        [-source <source>] [-type <msg_type>] [-key <msg_key>] 
-        [-nocase] [-notrunc] [-dupl <min>[,<max>]] [-latency <num>] [-ackd-by <user>]
+        [-server &lt;server&gt;] 
+        [-minutes &lt;mins&gt;] [-hours &lt;hours&gt;] [-days &lt;days&gt;] [-all] 
+        [-from &lt;dd/mm/yy&gt; [hh:mm]] [-to &lt;dd/mm/yy&gt; [hh:mm]] [-count &lt;num&gt;]
+        [-id &lt;msg_id&gt;] [-severity critical,normal,unknown,warning,minor,all,major] 
+        [-node &lt;node&gt;] [-application &lt;app&gt;] [-group &lt;msg_g&gt;] [-object &lt;obj&gt;]
+        [-text &lt;text&gt;] [-service &lt;svc_id&gt;] 
+        [-source &lt;source&gt;] [-type &lt;msg_type&gt;] [-key &lt;msg_key&gt;] 
+        [-nocase] [-notrunc] [-dupl &lt;min&gt;[,&lt;max&gt;]] [-latency &lt;num&gt;] [-ackd-by &lt;user&gt;]
         [-log-only] [-unmatched] [-notif] [-misc] [-cma] [-esc] [-owned] [-read-only]
-        [-ackn] [-fwdto] [-fwdfrom] [-fromovow] [-ovowserver <ovowserver>] 
+        [-ackn] [-fwdto] [-fwdfrom] [-fromovow] [-ovowserver &lt;ovowserver&gt;] 
         [-show [attributes,text,original,details,flags,times,latency,forwards,cma,actions,anno,tickets,some,all,none]]
-        [-region <code>] [-csv [-separator <sep>]] [-opcmsg]
+        [-region &lt;code&gt;] [-csv [-separator &lt;sep&gt;]] [-opcmsg]
         [-noheader] [-nofooter] 
         [-not] [-sort [first,last,node,dupl,severity,application,group,object,text,type,service]] [-reverse]
         [-history] 
         [-debug] [-version] [-help] 
 
        -server  HPOM database (default: )
-      -minutes  show messages from last <x> minutes 
-        -hours  show messages from last <x> hours 
-         -days  show messages from last <x> days 
+      -minutes  show messages from last &lt;x&gt; minutes 
+        -hours  show messages from last &lt;x&gt; hours 
+         -days  show messages from last &lt;x&gt; days 
           -all  show all available messages 
          -from  date-time (default: 2 hours) 
            -to  date-time (default: NOW) 
@@ -40,9 +40,9 @@ Usage: opchist
           -key% message key 
        -nocase  case-insensitive searches for node,application,group,object and text (default: case-sensitive) 
       -notrunc  do not truncate message text or annotations (default: trunc) 
-         -dupl  only show messages with number of duplicates >= min, and optionally <= max. 
-      -latency  show messages with latency >= min 
-      -ackd-by  show messages acknowledged by <user> 
+         -dupl  only show messages with number of duplicates &gt;= min, and optionally &lt;= max. 
+      -latency  show messages with latency &gt;= min 
+      -ackd-by  show messages acknowledged by &lt;user&gt; 
      -log-only! only show log only messages 
     -unmatched! only show unmatched messages 
         -notif! only show messages forwarded to notification service 
@@ -55,11 +55,11 @@ Usage: opchist
         -fwdto  only show messages that have been forwarded to another HPOV server 
       -fwdfrom  only show messages that have been forwarded from another HPOV server 
      -fromovow  only show messages that have been forwarded from OVOW server (can be defined in $HOME/.opchist file) 
-   -ovowserver  nodename of OVOW server (or define '$ovowserver = <ovowserver>', in config file) 
+   -ovowserver  nodename of OVOW server (or define '$ovowserver = &lt;ovowserver&gt;', in config file) 
          -show  attributes,text,original,details,flags,times,latency,forwards,cma,actions,anno,tickets,some,all,none (default: attributes) 
        -region  override region (default: EU)
           -csv  output in comma separated variable format
-    -separator  change the default separator from comma to <sep>
+    -separator  change the default separator from comma to &lt;sep&gt;
        -opcmsg  output in format that can be run as opcmsgs
      -noheader  turn off header 
      -nofooter  turn off footer 
@@ -78,5 +78,3 @@ Usage: opchist
         /Users/nicholas/.opchist
     TWiki: 
         http://yourserverhere/twiki/bin/view/HPOM/Opchist
-
-opchist,v10
